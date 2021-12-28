@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="card" style="width: 58rem;border-radius: 32px;">
+        <div class="card-body">
+        <h2 class="card-title">{{recipe.title}}</h2>
+        <img [src]="recipe.img" alt="" width="600">
+        <a  class="btn btn-primary">Like</a><span>{{recipe.like}}</span>
+        <p>Durée : {{recipe.time}} min</p>
+        <p class="card-text">{{recipe.description}}</p>
+        <h4>Instructions :</h4>
+        <p>{{recipe.instructions}}</p>
+        
+        </div>
+    </div>
+</div>
