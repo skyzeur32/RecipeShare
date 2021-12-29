@@ -1,9 +1,7 @@
 package com.recipeshare.recipeshare.Recipe;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,9 @@ public class RecipeController {
     @GetMapping
     public List<Recipe> getRecipes(){
         return rs.getRecipes();
+    }
+    @PostMapping
+    public void registerNewRecipe(@RequestBody Recipe r){
+        rs.addNewRecipe(r);
     }
 }

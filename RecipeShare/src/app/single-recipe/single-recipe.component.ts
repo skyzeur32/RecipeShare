@@ -27,4 +27,9 @@ export class SingleRecipeComponent implements OnInit {
     );
   }
 
+  onLikeAndDislike() : void{
+    this.rs.likeAndDislike(1,"like");
+    console.log("LIKE !!!");
+  }
+
 }

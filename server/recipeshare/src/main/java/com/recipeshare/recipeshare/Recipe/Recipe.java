@@ -19,28 +19,48 @@ public class Recipe {
     private String auteur;
     private String title;
     private String description;
-    private Integer like;
-    private Integer time;
+    private Integer likes;
+
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Integer getDuree() {
+        return duree;
+    }
+
+    public void setDuree(Integer duree) {
+        this.duree = duree;
+    }
+
+    private Integer duree;
     private String img;
+    private String instructions;
+
+
     public Recipe() {
     }
 
-    public Recipe(Long id,String auteur, String title, String description, Integer like, Integer time, String img, String instructions) {
+    public Recipe(Long id,String auteur, String title, String description, Integer likes, Integer duree, String img, String instructions) {
         this.auteur = auteur;
         this.title = title;
         this.description = description;
-        this.like = like;
-        this.time = time;
+        this.likes = likes;
+        this.duree = duree;
         this.img = img;
         this.instructions = instructions;
         this.id=id;
     }
-    public Recipe(String auteur, String title, String description, Integer like, Integer time, String img, String instructions) {
+    public Recipe(String auteur, String title, String description, Integer likes, Integer duree, String img, String instructions) {
         this.auteur = auteur;
         this.title = title;
         this.description = description;
-        this.like = like;
-        this.time = time;
+        this.likes = likes;
+        this.duree = duree;
         this.img = img;
         this.instructions = instructions;
     }
@@ -68,7 +88,7 @@ public class Recipe {
         this.instructions = instructions;
     }
 
-    private String instructions;
+
 
 
 
@@ -84,13 +104,7 @@ public class Recipe {
         return description;
     }
 
-    public Integer getLike() {
-        return like;
-    }
 
-    public Integer getTime() {
-        return time;
-    }
 
     public void setAutor(String auteur) {
         this.auteur = auteur;
@@ -104,11 +118,5 @@ public class Recipe {
         this.description = description;
     }
 
-    public void setLike(Integer like) {
-        this.like = like;
-    }
 
-    public void setTime(Integer time) {
-        this.time = time;
-    }
 }
